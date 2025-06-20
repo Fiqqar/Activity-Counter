@@ -1,0 +1,27 @@
+@import "globals";
+
+html, body, div#react-container, div.app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, label {
+    margin: 0;
+
+}
+
+div.app {
+    background-image: url("https://wallpapers.com/images/featured/coding-background-9izlympnd0ovmpli.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+div.page-404 {
+    background-color: $main-color;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
