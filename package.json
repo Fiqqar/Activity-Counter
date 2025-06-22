@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
@@ -16,6 +19,7 @@
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
     "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   }
 }
