@@ -4,14 +4,15 @@ const path = require('path');
 
 module.exports = {
     entry: './src/index.js',
+    mode: 'development',
     output: {
-        path: path.join(__dirname, 'dist/assets'),
+        path: path.resolve(__dirname, 'dist/assets'),
         filename: 'bundle.js',
-        publicPath: 'assets/'
+        publicPath: '/assets/'
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, 'dist'),
+            directory: path.resolve(__dirname, 'dist'),
         },
         port: 3000
     },
@@ -26,13 +27,15 @@ module.exports = {
 
             },
             {
-                test: /\.scss$/,
+                test: /\.s[ac]ss$/i,
                 use: [
-                    {loader: 'sass-loader'},
-                    {loader: 'autoprefixer-loader'},
-                    {loader: 'style-loader'},
-                    {loader: 'css-loader'},
-                ]
+                    // Creates `style` nodes from JS strings
+                    'style-loader',
+                    // Translates CSS into CommonJS
+                    'css-loader',
+                    // Compiles Sass to CSS
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.json$/,
